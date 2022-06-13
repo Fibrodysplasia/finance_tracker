@@ -1,9 +1,11 @@
-<div class="card card-header results-block">
-  <% if @stock %>
-      <strong>Symbol:</strong> <%= @stock.ticker.upcase %>
-      <strong>Name:</strong> <%= @stock.name %>
-      <strong>Price:</strong> <%= @stock.last_price %>
-  <% else %>
+<% if @stock %>
+  <div class="results-block mb-3 col-9">
+    <strong>Symbol:</strong> <%= @stock.ticker.upcase %>
+    <strong>Name:</strong> <%= @stock.name %>
+    <strong>Price:</strong> <%= @stock.last_price %>
+  </div>
+<% else %>
+  <div class="bad-results-block mb-3 col-9">
     <%= render 'layouts/messages' %>
-  <% end %>
-</div>
+  </div>
+<% end %>

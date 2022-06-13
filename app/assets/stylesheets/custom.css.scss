@@ -1,11 +1,117 @@
 @import 'bootstrap/dist/css/bootstrap';
 
-// .navbar-brand {
-//   font-size: 3rem;
-// }
+:root {
+  --g-yellow: #AFFC41;
+  --styled-text-shadow: rgba(175, 255, 47, 0.5);
+  --mint-green: #B2FF9E;
+  --charcoal: #2F4858;
+  --light-charcoal: #39576A;
+  --frostbite: #F62DAE;
+  --soft-gray: #D1D1D1;
+  --table-light: rgba(175, 252, 65, 0.1);
+  --table-dark: #B8B8B8;
+  --table-head: rgba(175, 252, 65, 0.5);
+  --body-bg: #ADADAD;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+.fin-nav {
+  background-color: var(--charcoal) !important;
+  border-bottom: 2px double var(--mint-green);
+}
+
+.btn-nav {
+  color: var(--mint-green) !important;
+  border-color: var(--g-yellow) !important;
+  box-shadow: 2px 2px 5px black;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  color: var(--mint-green) !important;
+  border-color: var(--g-yellow) !important;
+}
+
+.navbar-brand {
+  color: var(--mint-green) !important;
+  font-weight: bold;
+  text-decoration: dotted underline var(--g-yellow);
+  text-shadow: 2px 2px 5px black;
+}
+
+.nav-item:hover, .nav-item:focus,
+.nav-link:hover, .nav-link:focus {
+  color: var(--g-yellow) !important;
+}
+
+.nav-item, .nav-link {
+  color: var(--mint-green) !important;
+  text-shadow: 2px 2px 5px black;
+}
+
+.dropdown-menu {
+  background-color: var(--mint-green);
+  text-shadow: none !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--g-yellow);
+}
+
+.card-styled {
+  background-color: var(--soft-gray) !important;
+  padding: 20px !important;
+  border-style: solid;
+  border-color: var(--charcoal);
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px var(--g-yellow);
+}
+
+.table-styled {
+  background-color: var(--table-light) !important;
+  padding: 0px !important;
+  margin: auto;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 2px solid var(--charcoal);
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.table-styled th,
+.table-styled td {
+  border: 1px solid var(--charcoal);
+}
+
+.table-hover > tbody > tr:nth-child(2n+1) > td, 
+.table-hover > tbody > tr:nth-child(2n+1) > th {
+  background-color: var(--table-dark);
+}
+
+thead {
+  background-color: var(--table-head);
+}
+
+th, td {
+  overflow: hidden;
+}
+
+.styled-input {
+  outline: none !important;
+  border: 1px solid var(--charcoal);
+}
+
+.styled-input:focus {
+  border:1px solid var(--charcoal);
+  box-shadow: 0 0 10px var(--g-yellow);
+}
 
 .search-area {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
 .no-right-padding {
@@ -18,4 +124,22 @@
 
 .results-block {
   display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--charcoal);
+  border-radius: 4px;
+  padding: 7px !important;
+}
+
+.bad-results-block {
+  display: inline-block;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--frostbite);
+  border-radius: 4px;
+  padding: 0px !important;
+}
+
+.notice, .alert {
+  margin: 0px;
 }
