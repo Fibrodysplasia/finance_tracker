@@ -30,6 +30,15 @@ body {
   outline: none;
 }
 
+.btn-styled {
+  margin: 0.7rem;
+  background-color: var(--charcoal);
+  color: var(--mint-green) !important;
+  border-color: var(--g-yellow) !important;
+  box-shadow: 2px 2px 5px black;
+  outline: none;
+}
+
 .navbar-toggler-icon {
   color: var(--mint-green) !important;
   border-color: var(--g-yellow) !important;
