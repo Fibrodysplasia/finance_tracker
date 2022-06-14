@@ -50,11 +50,17 @@ body {
 .nav-item, .nav-link {
   color: var(--mint-green) !important;
   text-shadow: 2px 2px 5px black;
+  font-weight: 600;
 }
 
 .dropdown-menu {
   background-color: var(--mint-green);
   text-shadow: none !important;
+}
+
+.dropdown-item {
+  color: var(--charcoal);
+  font-weight: 600;
 }
 
 .dropdown-item:hover {
