@@ -19,7 +19,8 @@
                               class: 'form-control styled-input' %>
 
         <% if @minimum_password_length %>
-          <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
+          <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', 
+                  count: @minimum_password_length) %></small>
         <% end %>
       </div>
 
