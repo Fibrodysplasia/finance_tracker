@@ -16,6 +16,7 @@
 
 body {
   background-color: var(--body-bg);
+  padding-bottom: 3rem;
 }
 
 .fin-nav {
@@ -28,6 +29,22 @@ body {
   border-color: var(--g-yellow) !important;
   box-shadow: 2px 2px 5px black;
   outline: none;
+}
+
+.btn-remove {
+  margin: 0.7rem;
+  background-color: var(--mint-green);
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+  outline: none;
+}
+
+.btn-remove:hover {
+  background-color: var(--g-yellow);
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+  outline: none;
+  font-weight: bold;
 }
 
 .btn-styled {
