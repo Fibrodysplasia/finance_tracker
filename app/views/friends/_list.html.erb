@@ -14,10 +14,14 @@
         <th scope="row"><%= friend.email %></th>
         <td><%= friend.first_name %></td>
         <td><%= friend.last_name %></td>
-        <td><%= link_to 'Stop Following', '#', 
-                  method: :delete, 
-                  data: { confirm: 'Are you sure?' },
-                  class: "btn btn-remove" %></td>
+        <td>
+          <%= link_to 'Profile', user_path(friend),
+                    class: "btn btn-outline-primary" %>
+          <%= link_to 'Stop Follow', friendship_path(friend), 
+                    method: :delete, 
+                    data: { confirm: 'Are you sure?' },
+                    class: "btn btn-outline-danger" %>
+        </td>
       </tr>
     <% end %>
   </tbody>

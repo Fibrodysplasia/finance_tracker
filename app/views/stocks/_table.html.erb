@@ -14,11 +14,32 @@
         <th scope="row"><%= stock.ticker.upcase %></th>
         <td><%= stock.name %></td>
         <td><%= stock.last_price %></td>
-        <td><%= link_to 'Remove', user_stock_path(stock), 
-                  method: :delete, 
-                  data: { confirm: 'Are you sure?' },
-                  class: "btn btn-remove" %></td>
+        <td>
+          <% if current_user.id == @user.id %>
+            <%= link_to 'Remove', user_stock_path(stock), 
+                    method: :delete, 
+                    data: { confirm: 'Are you sure?' },
+                    class: "btn btn-remove" %>
+          <% end %>
+          <% if current_user.can_track_stock?(stock.ticker) %>
+            <%= link_to 'Add to Portfolio', 
+                        user_stocks_path(user: current_user, 
+                                          ticker: stock.ticker),
+                                          class: "btn btn-dark btn-styled",
+                                          method: :post %>
+            <% elsif current_user.id != @user.id %>
+              <span class="badge badge-secondary">
+                Currently tracking 
+                <% if !current_user.under_stock_limit? %>
+                10 stocks.
+                <% end %>
+                <% if current_user.stock_already_tracked?(stock.ticker) %>
+                stock.
+        <% end %>
+        </td>
       </tr>
+      </span>
+    <% end %>
     <% end %>
   </tbody>
 </table>
